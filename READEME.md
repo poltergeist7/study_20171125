@@ -1,6 +1,7 @@
 #JSON
 
 ##JSON.parse()
+:JSON 타입을 배열로 변환
 
  :  JSON을 문자열로 파싱하며, 파싱된 값을 추가로 변환하기도 합니다. <br>
 
@@ -31,6 +32,12 @@
   JSON.parse('true');               // true
   JSON.parse('"foo"');              // "foo"
   JSON.parse('[1, 5, "false"]');    // [1, 5, "false"]
-  JSON.parse('null');               // null 
+  JSON.parse('null');               // null
   ```
-  
+
+  ```javascript
+  JSON.parse('{"p": 5}', function(k, v) {
+    if (k === '') {return v; }      // if topmost value, return it,
+    return v * 2;                   // else return v * 2.
+  });                               // { p: 10 }
+  ```
