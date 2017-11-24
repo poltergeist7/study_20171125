@@ -221,4 +221,25 @@ employees[0].lastName = "수영";
    - 다른 객체를 반환하면, 그 객체는 replacer 함수를 각각의 속성에 대해 호출하며 순환적으로 JSON 문자열로 문자열화된다. 그 객체가 함수인 경우에는 JSON 문자열에 아무것도 추가되지 않는다.
    - undefined 를 반환하면, 그 속성은 JSON 문자열 결과에 포함되지 않는다.
 
-   > 유의: *replacer* 함수를 배열로부터 값을 제거하기 위해 사용할 수 없다. 만약 unde
+  > 유의: *replacer* 함수를 배열로부터 값을 제거하기 위해 사용할 수 없다. undefined 나 함수를 반환한다면 null 이 대신 사용될 것이다.
+
+  *함수 예제*
+
+  ```javascript
+  function replacer(key, value) {
+    if (typeof value === "string") {
+      return undefined;
+    }
+    return value;
+  }
+
+  var foo = {foundation: "Mozilla", model: "box", week: 45, transport: "car", month: 7};
+  var jsonString = JSON.stringify(foo, replacer);
+  ```
+
+  *배열 예제*
+
+  ```javascript
+  JSON.stringify(foo, ['week', 'month']);
+  // '{"week":45,"month":7}', 단지 "week" 와 "month" 속성을 포함한다
+  ```
