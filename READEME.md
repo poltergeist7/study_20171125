@@ -4,8 +4,7 @@
 
 
 ### JSON Name/Value Pairs
-JSON 데이터는 name/value 쌍으로 적습니다.
-Name/Value 쌍은 필드명으로 이루어집니다.(큰따옴표 사용)
+JSON 데이터는 name/value 쌍으로 적으며, Name/Value 쌍은 필드명으로 이루어집니다.
 
 ```javascript
 “firstName" : "태연"
@@ -17,7 +16,7 @@ Name/Value 쌍은 필드명으로 이루어집니다.(큰따옴표 사용)
 firstName = "김"
 ```
 
-[JSON Values]
+### JSON Values
 JSON 값은 다음이 될 수 있습니다.
 숫자
 문자열
