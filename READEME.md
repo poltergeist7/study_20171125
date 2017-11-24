@@ -7,11 +7,15 @@
 JSON 데이터는 name/value 쌍으로 적습니다.
 Name/Value 쌍은 필드명으로 이루어집니다.(큰따옴표 사용)
 
+```javascript
 “firstName" : "태연"
+```
 
-이해하기 쉽게 javascript 문장으로 바꾸면 다음과 같습니다.
+//이해하기 쉽게 javascript 문장으로 바꾸면 다음과 같습니다.
 
+```javascript
 firstName = "김"
+```
 
 [JSON Values]
 JSON 값은 다음이 될 수 있습니다.
