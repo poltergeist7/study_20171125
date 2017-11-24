@@ -58,38 +58,33 @@ JSON 배열은 대괄호로 둘러싸여집니다.
 > 위의 예처럼, 오브젝트 “employees"는 3개의 오브젝트를 포함하고 있는 배열입니다. 각 오브젝트는 성과 이름으로 이뤄진 사람의 기록입니다.
 
 ## **JSON은 Javascript 문법을 사용합니다.**
-JSON은 Javascript 문법을 사용하기 때문에, JSON으로 작업할 때 별도의 소프트웨어가 필요없습니다.
-Javascript를 사용해서 다음과 같이 오브젝트 배열을 생성하고 데이터를 할당할 수 있습니다.
 
+```javascript
 var employees = [
 { "firstName" : "지은" , "lastName" : "이" },
 { "firstName" : "윤아" , "lastName" : "임" },
 { "firstName" : "수연" , "lastName" : "정" }
 ];
+```
 
-Javascript 오브젝트 배열에서 첫 번째 엔트리에 다음과 같이 접근할 수 있습니다.
+> Javascript 오브젝트 배열에서 첫 번째 엔트리에 다음과 같이 접근할 수 있습니다.
 
+```javascript
 employees[0].lastName;
+```
 
 반환된 내용은 다음과 같을 것입니다.
+이 또한 데이터는 다음과 같이 수정할 수 있습니다.
 
-이
-
-또한 데이터는 다음과 같이 수정할 수 있습니다.
-
+```javascript
 employees[0].lastName = "수영";
-
-다음 강좌에서는 JSON 텍스트를 Javascript 오브젝트로 바꾸는 방법을 알아보겠습니다.
-
-[JSON Files]
-JSON 파일의 형식는 “.json"입니다.
-JSON 텍스트의 MIME 타입은 “application/json"입니다.
+```
 
  # JSON.parse()
 
  : JSON을 문자열로 파싱하며, 파싱된 값을 추가로 변환하기도 합니다. <br>
 
-  ###문법
+  ### 문법
 
   ```javascript
   JSON.parse(text[, reviver])
@@ -107,11 +102,11 @@ JSON 텍스트의 MIME 타입은 “application/json"입니다.
 
   주어진 JSON 텍스트에 따라 Object를 리턴함
 
-  ###에러
+  ### 에러
 
   파싱할 문자열이 유효한 JSON이 아닐 경우 SyntaxError  예외를 던짐.
 
-  ###JSON.parse() 사용하기
+  ### JSON.parse() 사용하기
 
   ```javascript
   JSON.parse('{}');                 // {}
@@ -171,7 +166,7 @@ JSON 텍스트의 MIME 타입은 “application/json"입니다.
 
   : 문자열화 프로세스의 작동을 변경하는 함수, 혹은 JSON 문자열에 포함될 값 객체의 속성들을 선택하기 위한 화이트리스트(whitelist)로 쓰이는 String 과 Number 객체들의 배열, 이 값이 null 이거나 제공되지 않으면, 객체의 모든 속성들이 JSON 문자열 결과에 포함된다.
 
-  ###space
+  ### space
 
   : 가독성을 목적으로  JSON 문자열 출력에 공백을 삽입하는데 사용되는 String 또는 Number 객체.
 
@@ -226,4 +221,4 @@ JSON 텍스트의 MIME 타입은 “application/json"입니다.
    - 다른 객체를 반환하면, 그 객체는 replacer 함수를 각각의 속성에 대해 호출하며 순환적으로 JSON 문자열로 문자열화된다. 그 객체가 함수인 경우에는 JSON 문자열에 아무것도 추가되지 않는다.
    - undefined 를 반환하면, 그 속성은 JSON 문자열 결과에 포함되지 않는다.
 
-   // 유의: *replacer* 함수를 배열로부터 값을 제거하기 위해 사용할 수 없다. 만약 unde
+   > 유의: *replacer* 함수를 배열로부터 값을 제거하기 위해 사용할 수 없다. 만약 unde
