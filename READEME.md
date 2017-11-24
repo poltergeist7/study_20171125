@@ -85,7 +85,7 @@ employees[0].lastName = "수영";
 JSON 파일의 형식는 “.json"입니다.
 JSON 텍스트의 MIME 타입은 “application/json"입니다.
 
- ##JSON.parse() <br>
+ # JSON.parse()
 
  : JSON을 문자열로 파싱하며, 파싱된 값을 추가로 변환하기도 합니다. <br>
 
@@ -95,7 +95,7 @@ JSON 텍스트의 MIME 타입은 “application/json"입니다.
   JSON.parse(text[, reviver])
   ```
 
-  ###인자값
+  ### 인자값
 
   *text* <br>
   JSON으로 파싱할 문자열. JSON 문법에 대해선 JSON 오브젝트를 참조하세요.
@@ -103,7 +103,7 @@ JSON 텍스트의 MIME 타입은 “application/json"입니다.
   *reviver* Optional <br>
   함수가 올 경우, 리턴되기 전에 파싱된 문자열 값이 어떻게 변환될 것인지를 결정함.
 
-  ###리턴
+  ### 리턴
 
   주어진 JSON 텍스트에 따라 Object를 리턴함
 
@@ -153,21 +153,21 @@ JSON 텍스트의 MIME 타입은 “application/json"입니다.
   JSON.parse('{"foo" : 1, }');
   ```
 
-##JSON.stringify() <br>
+# JSON.stringify()
 
  : 자바스크립트 값을 JSON 문자열로 변환하고, 리플레이서 (replacer) 함수가 지정되어있을 때 선택적으로 바꾸거나, 리플레이서 배열이 지정되어있을 때 지정된 속성만 선택적으로 포함할 수 있다.
 
-  ###문법
+  ### 문법
 
   ```
   JSON.stringify(value[, replacer[, space]])
   ```
 
-  ###value
+  ### value
 
   : JSON 문자열로 변환할 값
 
-  ###replacer
+  ### replacer
 
   : 문자열화 프로세스의 작동을 변경하는 함수, 혹은 JSON 문자열에 포함될 값 객체의 속성들을 선택하기 위한 화이트리스트(whitelist)로 쓰이는 String 과 Number 객체들의 배열, 이 값이 null 이거나 제공되지 않으면, 객체의 모든 속성들이 JSON 문자열 결과에 포함된다.
 
@@ -216,7 +216,7 @@ JSON 텍스트의 MIME 타입은 “application/json"입니다.
    // '{"y":"y"}'
    ```
 
-  ###replacer *매개 변수*
+  ### replacer *매개 변수*
 
   : replacer 매개변수는 함수 또는 배열이 될 수 있다. 함수일 때는 문자열화 될 key 와 value, 2개의 매개변수를 받는다. key 가 발견된 객체는 리플레이서의 this 매개변수로 제공된다.
 
