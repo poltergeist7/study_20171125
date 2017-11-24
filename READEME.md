@@ -10,20 +10,19 @@ JSON 데이터는 name/value 쌍으로 적으며, Name/Value 쌍은 필드명으
 “firstName" : "태연"
 ```
 
-//이해하기 쉽게 javascript 문장으로 바꾸면 다음과 같습니다.
+> 이해하기 쉽게 javascript 문장으로 바꾸면 다음과 같습니다.
 
 ```javascript
 firstName = "김"
 ```
 
 ### JSON Values
-JSON 값은 다음이 될 수 있습니다.
-숫자
-문자열
-Boolean
-배열
-오브젝트
-null
+   - 숫자
+   - 문자열
+   - Boolean
+   - 배열
+   - 오브젝트
+   - null
 
 [JSON Objects]
 JSON 오브젝트는 중괄호로 둘러싸여집니다.
