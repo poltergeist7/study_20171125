@@ -132,8 +132,10 @@
    ```
 
    ###replacer *매개 변수*
+
    : replacer 매개변수는 함수 또는 배열이 될 수 있다. 함수일 때는 문자열화 될 key 와 value, 2개의 매개변수를 받는다. key 가 발견된 객체는 리플레이서의 this 매개변수로 제공된다. Initially it gets called with an empty key representing the object being stringified, and it then gets called for each property on the object or array being stringified. 이것은 JSON 문자열에 추가되어야 하는 값을 반환해야한다:
    Number 를 반환하면, JSON 문자열에 추가될 때 그 수를 나타내는 문자열이 그 속성의 값으로 사용된다.
+
     - String 을 반환하면, 그것이 JSON 문자열에 추가될 때 속성의 값으로 사용된다.
     - Boolean 을 반환하면, 그것이 JSON 문자열에 추가될 때 "true" 또는 "false" 이 속성의 값으로 사용된다.
     - 다른 객체를 반환하면, 그 객체는 replacer 함수를 각각의 속성에 대해 호출하며 순환적으로 JSON 문자열로 문자열화된다. 그 객체가 함수인 경우에는 JSON 문자열에 아무것도 추가되지 않는다.
