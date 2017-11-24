@@ -1,4 +1,79 @@
-#JSON
+# JSON
+
+## 문법
+
+
+### JSON Name/Value Pairs
+JSON 데이터는 name/value 쌍으로 적습니다.
+Name/Value 쌍은 필드명으로 이루어집니다.(큰따옴표 사용)
+
+“firstName" : "태연"
+
+이해하기 쉽게 javascript 문장으로 바꾸면 다음과 같습니다.
+
+firstName = "김"
+
+[JSON Values]
+JSON 값은 다음이 될 수 있습니다.
+숫자
+문자열
+Boolean
+배열
+오브젝트
+null
+
+[JSON Objects]
+JSON 오브젝트는 중괄호로 둘러싸여집니다.
+오브젝트는 여러 개의 name/value 쌍을 포함시킬 수 있습니다.
+
+{ “firstName" : "태연" , "lastName" : "김" }
+
+이해하기 쉽게 javascript 문장으로 바꾸면 다음과 같습니다.
+
+firstName = "태연"
+lastName = "김"
+
+[JSON Arrays]
+JSON 배열은 대괄호로 둘러싸여집니다.
+배열은 다음의 예처럼 여러 개의 오브젝트를 포함할 수 있습니다.
+
+{
+“employees" : [
+{ "firstName" : "지은" , "lastname" : "이" },
+{ "firstName" : "윤아" , "lastname" : "임" },
+{ "firstName" : "수연" , "lastname" : "정" }
+]
+}
+
+위의 예처럼, 오브젝트 “employees"는 3개의 오브젝트를 포함하고 있는 배열입니다. 각 오브젝트는 성과 이름으로 이뤄진 사람의 기록입니다.
+
+[JSON은 Javascript 문법을 사용합니다]
+JSON은 Javascript 문법을 사용하기 때문에, JSON으로 작업할 때 별도의 소프트웨어가 필요없습니다.
+Javascript를 사용해서 다음과 같이 오브젝트 배열을 생성하고 데이터를 할당할 수 있습니다.
+
+var employees = [
+{ "firstName" : "지은" , "lastName" : "이" },
+{ "firstName" : "윤아" , "lastName" : "임" },
+{ "firstName" : "수연" , "lastName" : "정" }
+];
+
+Javascript 오브젝트 배열에서 첫 번째 엔트리에 다음과 같이 접근할 수 있습니다.
+
+employees[0].lastName;
+
+반환된 내용은 다음과 같을 것입니다.
+
+이
+
+또한 데이터는 다음과 같이 수정할 수 있습니다.
+
+employees[0].lastName = "수영";
+
+다음 강좌에서는 JSON 텍스트를 Javascript 오브젝트로 바꾸는 방법을 알아보겠습니다.
+
+[JSON Files]
+JSON 파일의 형식는 “.json"입니다.
+JSON 텍스트의 MIME 타입은 “application/json"입니다.
 
  ##JSON.parse() <br>
 
@@ -140,3 +215,5 @@
    - Boolean 을 반환하면, 그것이 JSON 문자열에 추가될 때 "true" 또는 "false" 이 속성의 값으로 사용된다.
    - 다른 객체를 반환하면, 그 객체는 replacer 함수를 각각의 속성에 대해 호출하며 순환적으로 JSON 문자열로 문자열화된다. 그 객체가 함수인 경우에는 JSON 문자열에 아무것도 추가되지 않는다.
    - undefined 를 반환하면, 그 속성은 JSON 문자열 결과에 포함되지 않는다.
+
+   // 유의: *replacer* 함수를 배열로부터 값을 제거하기 위해 사용할 수 없다. 만약 unde
